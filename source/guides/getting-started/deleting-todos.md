@@ -30,7 +30,7 @@ Because the todo is no longer part of the collection of all todos, its `<li>` el
 Reload your web browser to ensure that there are no errors and the behaviors described above occurs.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/eREkanA/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/gatul/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 

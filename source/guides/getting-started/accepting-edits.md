@@ -52,22 +52,24 @@ actions: {
     this.set('isEditing', true);
   },
   acceptChanges: function() {
-    this.set('isEditing', false);
+    if (this.get('isEditing')) {
+      this.set('isEditing', false);
 
-    if (Ember.isEmpty(this.get('model.title'))) {
-      this.send('removeTodo');
-    } else {
-      this.get('model').save();
+      if (Ember.isEmpty(this.get('model.title'))) {
+        this.send('removeTodo');
+      } else {
+        this.get('model').save();
+      }
     }
   }
 },
 // ... additional lines truncated for brevity ...
 ```
 
-This method will set the controller's `isEditing` property to false and commit all changes made to the todo.
+This method will set the controller's `isEditing` property to false and commit all changes made to the todo if the controller is in the edit mode.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/USOlAna/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/jorav/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
